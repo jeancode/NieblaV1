@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niebla</title>
+    <style>
+        body{
+            margin:0px;
+            font-family: sans-serif;
+        }
+        #contenido{
+            position: fixed;
+            width:100%;
+            height:100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(https://images.alphacoders.com/109/thumb-1920-1093448.jpg);;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #form{
+
+            width:300px;
+            height:300px;;
+            border:1px solid rgba(255, 255, 255, 0.459);
+            background:rgba(0, 0, 0, 0.349);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            flex-direction: column;;
+            backdrop-filter:blur(10px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.219);
+        }
+
+        #form h3{
+
+            font-size: 30px;;
+            font-weight: 100;
+
+
+        }
+        .text{
+            width: 250px;;
+            min-height: 30px;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.486);
+            border:1px solid rgba(255, 255, 255, 0.336);
+            padding-left: 10px;;
+            outline:none;
+            color:white;
+        }
+        .boton{
+            border:none;
+            min-width: 260px;
+            min-height:30px;
+            background: black;
+            color:white;
+            -webkit-transition: all .5s ease;;
+        }
+        .boton:hover{
+            background-color: rgb(13, 121, 245);
+            -webkit-transition: all .5s ease;;
+        }
+
+
+        .topIn{
+
+            animation: topIn 1s ease forwards;
+        }
+        .bottomIn{
+
+            animation: bottomIn 1s ease forwards;
+        }
+        .leftIn{
+
+            animation: leftIn 1s ease forwards;
+        }
+        .rightIn{
+
+            animation: rightIn 1s ease forwards;
+        }
+
+        @keyframes topIn{
+            from{
+                opacity: 0;
+                -webkit-transform: translateY(-200%);
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+
+        }
+        @keyframes bottomIn{
+            from{
+                opacity: 0;
+                -webkit-transform: translateY(200%);
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+
+        }
+        @keyframes leftIn{
+            from{
+                opacity: 0;
+                -webkit-transform: translateX(200%);
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+
+        }
+
+        @keyframes rightIn{
+            from{
+                opacity: 0;
+                -webkit-transform: translateX(-200%);
+            }
+            to{
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="contenido">
+
+        <div id="form">
+
+            <h3 class="topIn">Sign In</h3>
+
+            <input type="text" class="text leftIn" placeholder="Email">
+            <input type="password" class="text rightIn"  placeholder="Password">
+
+            <input type="submit" class="boton bottomIn" value="Sign In" >
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
